@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+        <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+        <title>Bootstrap Day 2</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Blogen</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Users</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <i class="bi bi-person-fill"></i> Welcome Brand
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-person-fill-x"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="bg-primary text-light d-flex align-items-center" style="height: 5rem">
+            <div class="container">
+                <h3 class="fs-1"><i class="bi bi-gear-fill"></i> Add Post</h3>
+            </div>
+        </header>
+
+        <main>
+            <div class="container mt-3">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="email" class="form-control" id="title" placeholder="" />
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="category">
+                        <option>Web Development</option>
+                        <option>Tech Gadgets</option>
+                        <option>Business</option>
+                        <option>Health & Wellness</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="uploadFile" class="form-label">Upload Image</label>
+                    <input class="form-control" type="file" id="uploadFile" />
+                    <div class="text-secondary">Max Size 3MB</div>
+                </div>
+                <div class="mb-3">
+                    <label for="editor" class="form-label">Body</label>
+                    <textarea name="editor1"></textarea>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-info text-light">Save Changes</button>
+                </div>
+            </div>
+        </main>
+        <script>
+            CKEDITOR.replace("editor1");
+        </script>
+    </body>
+</html>
